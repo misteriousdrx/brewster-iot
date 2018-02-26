@@ -1,0 +1,106 @@
+<ion-header>
+	<ion-navbar color="primary">
+		<ion-title>
+			Brewster
+		</ion-title>
+	</ion-navbar>
+</ion-header>
+
+<ion-content padding>
+	<ion-card *ngIf="!isConectado">
+		<ion-card-header color="primary">
+			Servidor
+		</ion-card-header>
+
+		<ion-card-content>
+			<ion-item>
+				<ion-label floating>Endereço</ion-label>
+				<ion-input type="text" [(ngModel)]="host"></ion-input>
+			</ion-item>
+
+			<ion-item>
+				<ion-label floating>Porta</ion-label>
+				<ion-input type="number" [(ngModel)]="porta"></ion-input>
+			</ion-item>
+
+			<button ion-button block color="secondary" (click)="conectar()">Conectar</button>
+		</ion-card-content>
+	</ion-card>
+
+	<span *ngIf="isConectado">
+		<ion-card>
+			<ion-card-header color="primary">
+				Servidor
+			</ion-card-header>
+
+			<ion-card-content>
+				<button ion-button block color="danger" (click)="desconectar()">Desconectar</button>
+			</ion-card-content>
+		</ion-card>
+		
+		<ion-card>
+			<ion-card-content>
+				<button ion-button icon-left block color="secondary" (click)="atualizar()">
+					<ion-icon name="refresh"></ion-icon>
+					Atualizar
+				</button>
+			</ion-card-content>
+		</ion-card>
+
+		<ion-card>
+			<ion-card-content>
+				<ion-item>
+					<ion-label>Modo Manual</ion-label>
+					<ion-toggle checked="false" [(ngModel)]="modoManual" (ionChange)="definirModos()"></ion-toggle>
+				</ion-item>
+
+				<ion-item *ngIf="modoManual">
+					<ion-label>Estado do Switch</ion-label>
+					<ion-toggle checked="false" [(ngModel)]="estadoSwitch" (ionChange)="definirModos()"></ion-toggle>
+				</ion-item>
+			</ion-card-content>
+		</ion-card>
+
+		<ion-card>
+			<ion-card-header color="primary">
+				Teperatura Atual
+			</ion-card-header>
+
+			<ion-card-content>
+				<h1>{{tempAtual}}ºC</h1>
+			</ion-card-content>
+		</ion-card>
+
+		<ion-card>
+			<ion-card-header color="primary">
+				Estado Atual do Switch
+			</ion-card-header>
+
+			<ion-card-content>
+				<h1>{{descStatus}}</h1>
+			</ion-card-content>
+		</ion-card>
+
+		<ion-card *ngIf="!modoManual">
+			<ion-card-header color="primary">
+				Definir Teperaturas
+			</ion-card-header>
+
+			<ion-card-content>
+				<ion-item>
+					<ion-label floating>Alvo (ºC)</ion-label>
+					<ion-input type="number" value="" [(ngModel)]="tempIdeal"></ion-input>
+				</ion-item>
+
+				<ion-item>
+					<ion-label floating>Tolerância (ºC)</ion-label>
+					<ion-input type="number" value="" [(ngModel)]="tempTolerancia"></ion-input>
+				</ion-item>
+
+				<button ion-button block (click)="definirTemperaturas()">Definir</button>
+
+			</ion-card-content>
+		</ion-card>
+
+	</span>
+</ion-content>
