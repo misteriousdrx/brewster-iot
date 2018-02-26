@@ -1,0 +1,37 @@
+# Specifies intentionally untracked files to ignore when using Git
+# http://git-scm.com/docs/gitignore
+
+*~
+*.sw[mnpcod]
+*.log
+*.tmp
+*.tmp.*
+log.txt
+*.sublime-project
+*.sublime-workspace
+.vscode/
+npm-debug.log*
+
+.brewster-iot-app/idea/
+.brewster-iot-app/sourcemaps/
+.brewster-iot-app/sass-cache/
+.brewster-iot-app/tmp/
+.brewster-iot-app/versions/
+brewster-iot-app/coverage/
+brewster-iot-app/dist/
+brewster-iot-app/node_modules/
+brewster-iot-app/tmp/
+brewster-iot-app/temp/
+brewster-iot-app/hooks/
+brewster-iot-app/platforms/
+111
+brewster-iot-app/plugins/android.json
+brewster-iot-app/plugins/ios.json
+brewster-iot-app/www/
+$RECYCLE.BIN/
+
+.DS_Store
+Thumbs.db
+UserInterfaceState.xcuserstate
+
+brewster-iot-api/plugins/
