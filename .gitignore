@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 # Specifies intentionally untracked files to ignore when using Git
 # http://git-scm.com/docs/gitignore
 
@@ -13,29 +12,28 @@ log.txt
 .vscode/
 npm-debug.log*
 
-.brewster-iot-app/idea/
-.brewster-iot-app/sourcemaps/
-.brewster-iot-app/sass-cache/
-.brewster-iot-app/tmp/
-.brewster-iot-app/versions/
-brewster-iot-app/coverage/
-brewster-iot-app/dist/
-brewster-iot-app/node_modules/
-brewster-iot-app/tmp/
-brewster-iot-app/temp/
-brewster-iot-app/hooks/
-brewster-iot-app/platforms/
-111
-brewster-iot-app/plugins/android.json
-brewster-iot-app/plugins/ios.json
-brewster-iot-app/www/
+.idea/
+.sourcemaps/
+.sass-cache/
+.tmp/
+.versions/
+coverage/
+dist/
+node_modules/
+tmp/
+temp/
+hooks/
+platforms/
+plugins/android.json
+plugins/ios.json
+www/
 $RECYCLE.BIN/
 
 .DS_Store
 Thumbs.db
 UserInterfaceState.xcuserstate
 
-brewster-iot-api/plugins/
+plugins/
 =======
 # Logs
 logs
@@ -95,5 +93,3 @@ typings/
 
 # dotenv environment variables file
 .env
-
->>>>>>> efd90c52e1c582e07a8f7509735439955748b9a2
